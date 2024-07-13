@@ -6,8 +6,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          submodules: true
       - name: Set up Python version
         uses: actions/setup-python@v5
         with:
@@ -19,7 +17,7 @@ jobs:
       - name: Check directory structure
         run: ls
       - name: Check path structure
-        run: ls -l TodoApp
+        run: ls -la TodoApp
       - name: Run Tests
         run: |
           pytest --disable-warnings --cov=./TodoApp TodoApp/test/
