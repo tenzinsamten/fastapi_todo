@@ -39,12 +39,16 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.FASTAPI_TOKEN }}
-      - name: Get commit id
-        id: commit_hash
-        run: echo "::set-output name=commit_hash::$(git rev-parse HEAD)"
+      - name: Set short git commit SHA
+        id: vars
+        run: |
+          calculatedSha=$(git rev-parse --short ${{ github.sha }})
+          echo "COMMIT_SHORT_SHA=$calculatedSha" >> $GITHUB_ENV
+      - name: Confirm git commit SHA output
+        run: echo ${{ env.COMMIT_SHORT_SHA }}
       - name: Build Docker image in Github container registry
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner }}/todoapp:${{ github.run_id }}-${{ steps.commit_hash.outputs.commit_hash }} .
+          docker build -t ghcr.io/${{ github.repository_owner }}/todoapp:${{ github.run_id }}-${{ env.COMMIT_SHORT_SHA }} .
       - name: Push Docker image to GHCR
         run: |
           docker push ghcr.io/${{ github.repository_owner }}/todoapp:${{ github.run_id }}-${{ steps.commit_hash.outputs.commit_hash }}
