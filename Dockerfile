@@ -7,3 +7,5 @@ COPY ./requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
 COPY ./TodoApp /app/TodoApp
+
+CMD ["fastapi", "run", "TodoApp/main.py", "--port", "8000"]
