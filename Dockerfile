@@ -8,4 +8,6 @@ RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
 COPY ./TodoApp /app/TodoApp
 
-CMD ["fastapi", "run", "TodoApp/main.py", "--port", "8000"]
+CMD ["sh", "-c", "uvicorn TodoApp.main:app --port=8000 --host=0.0.0.0"]
+
+EXPOSE 8000
