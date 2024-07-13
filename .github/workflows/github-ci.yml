@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          path: TodoApp
       - name: Set up Python version
         uses: actions/setup-python@v5
         with:
