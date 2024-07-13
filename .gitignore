@@ -140,3 +140,5 @@ log/*
 
 .env
 .envrc
+.coverage
+testdb.db
