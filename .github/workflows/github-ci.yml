@@ -16,13 +16,13 @@ jobs:
           pip install -r requirements.txt
       - name: Run Tests
         run: |
-          pytest -disable-warnings --cov=TodoApp TodoApp/test/
+          pytest --disable-warnings --cov=TodoApp TodoApp/test/
       - name: Save coverage report
         run: |
           pytest --cov=TodoApp --cov-report=xml > coverage.xml
 
   build_and_push_docker_image:
-    name: Build and push the docker image
+    name: Build and Dockerize
     runs-on: ubuntu-latest
     needs: test
     if: success()
