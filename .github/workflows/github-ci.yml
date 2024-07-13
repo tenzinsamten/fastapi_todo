@@ -17,6 +17,10 @@ jobs:
       - name: Check directory structure
         run: ls
       - name: Check path structure
+        run: ls -la testFolder
+      - name: Check path structure
+        run: ls -la testPackage
+      - name: Check path structure
         run: ls -la TodoApp
       - name: Run Tests
         run: |
