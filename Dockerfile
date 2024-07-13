@@ -8,6 +8,7 @@ RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
 COPY ./TodoApp /app/TodoApp
 
-CMD ["sh", "-c", "uvicorn TodoApp.main:app --port=8000 --host=0.0.0.0"]
+EXPOSE 10000
 
-EXPOSE 8000
+CMD ["sh", "-c", "uvicorn TodoApp.main:app --port=10000 --host=0.0.0.0"]
+
