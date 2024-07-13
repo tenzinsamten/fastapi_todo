@@ -16,9 +16,11 @@ jobs:
           pip install -r requirements.txt
       - name: Check directory structure
         run: ls
+      - name: Check path structure
+        run: ls -l TodoApp
       - name: Run Tests
         run: |
-          pytest --disable-warnings --cov=TodoApp TodoApp/test/
+          pytest --disable-warnings --cov=./TodoApp TodoApp/test/
       - name: Save coverage report
         run: |
           pytest --cov=TodoApp --cov-report=xml > coverage.xml
