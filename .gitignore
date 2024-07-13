@@ -1,0 +1,142 @@
+# Keys #
+*.key
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Icon[\r]
+Thumbs.db
+.idea
+
+# Apache Config #
+#################
+.htaccess
+.htpasswd
+
+# Redis Dumps #
+###############
+dump.rdb
+
+# Node Modules #
+################
+node_modules
+
+# PyCharm directory #
+#####################
+/.idea
+
+# Visual Studio Code directory #
+#####################
+/.vscode
+*.code-workspace
+
+# pystest cache #
+#####################
+/.pytest_cache
+/sefaria/tests/.pytest_cache
+
+
+# Sefaria Local Settings files #
+################################
+#/sefaria/local_settings.py
+
+# Site specific templates and urls #
+####################################
+# /site
+
+# Symlink needed for Djano admin #
+##################################
+/static/admin
+
+#  Virtualenv Files #
+#####################
+fastapienv/
+.python-version
+.node-version
+
+# Partner files #
+#################
+/static/partner
+
+# Robots.txt #
+##############
+/static/robots.txt
+
+# Sitemaps #
+############
+/static/sitemaps
+
+# Backed up Data #
+##################
+/data/backup
+
+# Private Data Files #
+##################
+/data/private
+
+# Logs #
+########
+/logs
+/log
+
+# Docs #
+########
+/doc/_build
+
+# Client secrets for Google OAuth 2.0
+#####################################
+client_secrets.json
+
+# Webpack #
+###########
+/static/bundles
+webpack-stats.*\.json
+webpack-stats.json
+
+# PAGERANK #
+static/pagerank.json
+static/sheetrank.json
+
+/random_files
+
+# Miscellaneous #
+#################
+
+fastapienv/*
+dump/*
+tmp/*
+log/*
+/static/bundles
+/dockerData
+
+.env
+.envrc
