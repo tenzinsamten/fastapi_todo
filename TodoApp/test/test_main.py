@@ -7,4 +7,4 @@ client = TestClient(app)
 
 def test_app_heath():
     response = client.get("/health")
-    assert response.status_code == status.HTTP_200_OK
+    assert response.status_code == status.HTTP_204_NO_CONTENT
