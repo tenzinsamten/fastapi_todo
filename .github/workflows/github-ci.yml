@@ -14,6 +14,8 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+      - name: Check directory structure
+        run: ls
       - name: Run Tests
         run: |
           pytest --disable-warnings --cov=TodoApp TodoApp/test/
