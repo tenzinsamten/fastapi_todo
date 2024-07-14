@@ -24,13 +24,6 @@ jobs:
       - name: Save coverage report
         run: |
           pytest --cov=TodoApp --cov-report=xml > coverage.xml
-      - name: Run SonarQube analysis
-        uses: SonarSource/sonarcloud-github-action@master
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
-          args:
-            -Dsonar.python.coverage.reportPaths=coverage.xml
       - name: Check report
         run: ls -la
 
