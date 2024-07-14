@@ -23,7 +23,7 @@ jobs:
           pytest --disable-warnings --cov=./TodoApp TodoApp/test/
       - name: Save coverage report
         run: |
-          pytest --cov=TodoApp --cov-report=xml > coverage.xml
+          pytest --cov=TodoApp --cov-report=xml
       - name: Check report
         run: ls -la
       - name: Run SonarQube analysis
